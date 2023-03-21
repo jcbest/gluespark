@@ -1,2 +1,2 @@
-# gluespark
-GlueSpark Engineering and IT Consultant Ltd
+# university-website
+this is my school
