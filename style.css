@@ -1,0 +1,390 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    min-height: 100vh;
+    width:100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url("images/3.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .img{
+    width: 150p;
+}
+
+
+.nav-links{
+flex: 1;
+text-align: right;
+
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+
+
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.checkbtn{
+    font-size:30px;
+    color: white;
+    float: right;
+    line-height:0;
+    margin-left: 40px;
+    cursor: pointer;
+    align-items: center;
+    display: none;
+    margin-top: 5px;
+}
+#check{
+    display: none;
+
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    color: #fff;
+    font-size: 14px;
+
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+
+@media(max-width:700px){
+    .text-box h1{
+        font-size: 16px;
+    }
+
+    .checkbtn{
+        display: inline-block;
+    }
+    .nav-links ul{
+
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: #2c4054;
+        margin: 80px 0;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+        z-index: 1;
+
+
+    }
+    .nav-links ul li{
+        display:block;
+        padding: 20px 0;
+        line-height: 20px;
+        align-items: center;
+        margin-left: 0;
+        color: blue;
+    }
+    #check:checked~ul{
+    left: 0;
+    }
+
+
+    .row{
+
+        flex-direction: column;
+    }
+
+
+}
+
+
+nav .img{
+    width: 80px;
+}
+
+
+.cta h1{
+    font-size: 12px;
+}
+.campus-col img{
+    height: 50px;
+}
+
+
+/*------ Course---*/
+.course{
+
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+
+}
+hi{
+    font-size: 36px;
+    font-weight: 600;
+    }
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row{
+    margin-top:5%;
+    display:flex;
+    justify-content: space-between;
+}
+.course-col{
+    flex-basis:31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-boxS;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600px;
+    margin: 10px 0;
+}
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(4,9,30,0.7);
+}
+.go-top{
+    align-content: center;
+    right: 100%;
+    float: right;
+    border: #777;
+    background: #f44336;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 5px;
+    margin-bottom: 5px;
+    color: #fff;
+    font-size: 10px;
+}
+.go-top:hover{
+    box-shadow:0 0 20px 0px rgba(4,9,30,0.7);
+}
+
+/*---cAMPUS----*/
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+}
+.campus-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.campus-col img{
+    width: 100%;
+    display: block;
+   height: 600px;
+   object-fit: cover;
+}
+.layer{
+
+ background: transparent;
+ height: 100%;
+ width: 100%;
+ position: absolute;
+ top: 0;
+ left: 0;
+ transition: 0.5s;
+
+}
+.layer:hover{
+
+    background: rgba(226, 0, 0, 0.70);
+}
+.layer h3{
+width: 100%;
+font-weight: 500px;
+color: #fff;
+font-size: 26px;
+bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+position: absolute;
+opacity: 0;
+transition: 0.5S;
+}
+
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+.facilities{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 20px;
+}
+.facilities-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+.facilities-col img{
+    width: 100%;
+    border-radius: 10px;
+    object-fit:cover;
+    height: 70%;
+}
+.facilities-col {
+    padding: 0;
+}
+.facilities-col h3{
+    padding-top: 16px;
+    margin-bottom: 15px ;
+    text-align: left;
+}
+
+.testimonial{
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+.testimonial-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin: 5px 5px;
+    text-align: left;
+    background: #fff3f3;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+
+.testimonial-col img{
+    height: 40px;
+    width: 40px;
+    margin-left: 5px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.testimonial-col p{
+    padding: 0;
+    font-size: 12px;
+}
+.testimonial-col h3{
+    margin-top: 15px;
+    text-align: right;
+    font-size: 12px;
+}
+.testimonial-col .normal{
+    width: 20px;
+    height: 20px;
+   margin-bottom: 10px;
+   color: darkorange;
+
+}
+
+.testimonial-col .normal-x{
+    width: 20px;
+    height: 20px;
+   margin-bottom: 10px;
+   color: rgb(255, 225, 0);
+
+}
+.cta {
+    margin: 2px auto;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/3.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    padding: 50px 0;
+    text-align: center;
+}
+.cta h1{
+    color:#fff ;
+    margin-bottom: 10px;
+    padding: 0;
+    text-align: center;
+}
+/*------ Footer---*/
+.footer{
+
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    align-items: center;
+
+}
+.footer h4{
+    margin-bottom: 10px;
+    margin-top: 5px;
+    font-weight: 600;
+    align-items: center;
+}
+.icons .fa{
+    color: #f44336;
+    margin: 0 13px;
+    cursor:pointer;
+    padding: 18px 0;
+}
+.fa-heart-o{
+    color: #f44336;
+}
